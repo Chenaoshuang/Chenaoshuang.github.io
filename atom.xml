@@ -72,15 +72,15 @@
     <link href="http://Chenaoshuang.github.io/2018/03/27/2018-notes/KotLin/"/>
     <id>http://Chenaoshuang.github.io/2018/03/27/2018-notes/KotLin/</id>
     <published>2018-03-27T09:39:07.702Z</published>
-    <updated>2018-03-29T08:14:32.987Z</updated>
+    <updated>2018-03-29T09:09:03.465Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组的声明"><a href="#数组的声明" class="headerlink" title="数组的声明"></a>数组的声明</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var int_array:IntArray = intArrayOf(1, 2, 3)</span><br><span class="line">var long_array:LongArray = longArrayOf(1, 2, 3)</span><br><span class="line">var float_array:FloatArray = floatArrayOf(1.0f, 2.0f, 3.0f)</span><br><span class="line">var double_array:DoubleArray = doubleArrayOf(1.0, 2.0, 3.0)</span><br><span class="line">var boolean_array:BooleanArray = booleanArrayOf(<span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">var char_array:CharArray = charArrayOf(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>)</span><br><span class="line">//字符串数组声明较为特殊</span><br><span class="line">var string_array:Array&lt;String&gt; = arrayOf(<span class="string">"How"</span>, <span class="string">"Are"</span>, <span class="string">"You"</span>)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h2&gt;&lt;h2 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot; title=&quot;HashMap&quot;&gt;&lt;/
+        &lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h2&gt;&lt;h3 id=&quot;数组的声明&quot;&gt;&lt;a href=&quot;#数组的声明&quot; class=&quot;headerlink&quot; title=&quot;数组的声明&quot;&gt;&lt;/a&gt;数组的声
       
     
     </summary>
