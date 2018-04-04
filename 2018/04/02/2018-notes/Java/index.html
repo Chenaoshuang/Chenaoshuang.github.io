@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Chen</title>
+    <title>Java笔记 · Chen</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -65,6 +65,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
     <link rel="icon" href= /assets/miao.ico>
     <script>
@@ -175,12 +177,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Chen</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Java笔记</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Chen</a>
 </header>
@@ -194,24 +207,69 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            Java笔记
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Notes">Notes</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/02</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -295,40 +353,50 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h2 id="Java-Map"><a href="#Java-Map" class="headerlink" title="Java Map"></a>Java Map</h2><p>Map用于存储元素对（称为“键”和“值”），其中每个键映射到一个值</p>
+<h3 id="构建Map"><a href="#构建Map" class="headerlink" title="构建Map"></a>构建Map</h3><p>Map定义了几个用于插入和删除元素的变换方法</p>
+<table><br>     <tr><br>        <td>clear()</td><br>        <td>从Map中删除所有映射<br>     </td></tr><br>     <tr><br>        <td>remove(Object key)</td><br>        <td>从Map中删除键和关联的值<br>     </td></tr><br>     <tr><br>        <td>put(Object key,Object value)</td><br>        <td>将指定值与指定键相关联<br>     </td></tr><br>     <tr><br>        <td>putAll(Map t)</td><br>        <td>将指定指定Map中的所有映射复制到map<br>     </td></tr><br></table>
+
+<h3 id="查看Map"><a href="#查看Map" class="headerlink" title="查看Map"></a>查看Map</h3><p>keySet()抽取key序列，将map中的所有keys生成一个Set<em>keySet()中元素是不允许重复的</em><br>values()抽取value序列，将map中的所有values生成一个Collection<em>values()中的元素是允许重复的</em></p>
+<table><br>     <tr><br>        <td>entrySet()</td><br>        <td>返回Map中所包含映射的Set视图。Set中的每个元素都是一个Map.Entry对象，可以使用getKey()和getValue()方法（还有一个setValue()方法）访问后者的键元素和值元素</td><br>     </tr><br>     <tr><br>        <td>keySet()</td><br>        <td>返回Map中所包含键的Set视图。删除Set中的元素还将删除Map中相应的映射（键和值）</td><br>     </tr><br>     <tr><br>        <td>values()</td><br>        <td>返回map中所包含值的Collection视图。删除Collection中的元素还将删除Map中相应的映射（键和值）</td><br>     </tr><br></table>
+
+<h3 id="访问元素"><a href="#访问元素" class="headerlink" title="访问元素"></a>访问元素</h3><table><br>     <tr><br>        <td>get(Object key)</td><br>        <td>返回与指定键关联的值</td><br>     </tr><br>     <tr><br>        <td>containsKey(Object key)</td><br>        <td>如果Map包含指定键的映射，则返回true</td><br>     </tr><br>     <tr><br>        <td>containsValue(Object value)</td><br>        <td>如果此Map将一个或多个键映射到指定值，则返回true</td><br>     </tr><br>     <tr><br>        <td>isEmpty()</td><br>        <td>如果Map不包含键-值映射，则返回true</td><br>     </tr><br>     <tr><br>        <td>size()</td><br>        <td>返回Map中的键-值映射的数量</td><br>     </tr><br></table>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/04/02/2018-notes/Github and Hexo/" title= Github and hexo >
+                    <div class="nextTitle">Github and hexo</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/04/02/2018-notes/KotLin/" title= Kotlin笔记 >
+                    <div class="prevTitle">Kotlin笔记</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/02/2018-notes/Java/" >
-                
-                    <span>Java笔记</span>
-            </a>
-            <div class="abstract-content">
-                正则表达式语法Java MapMap用于存储元素对（称为“键”和“值”），其中每个键映射到一个值
-构建MapMap定义了几个用于插入和删除元素的变换方法
-             clear()        从Map中删除所有映射                  remove(Object key)        从Map中删除键和关联的值                  put(Ob...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Java">Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Notes">Notes</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -350,6 +418,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">1.1.</span> <span class="toc-text">语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Map"><span class="toc-number">2.</span> <span class="toc-text">Java Map</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#构建Map"><span class="toc-number">2.1.</span> <span class="toc-text">构建Map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看Map"><span class="toc-number">2.2.</span> <span class="toc-text">查看Map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问元素"><span class="toc-number">2.3.</span> <span class="toc-text">访问元素</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -557,6 +643,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
