@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Kotlin笔记 · Chen</title>
+    <title>Java Web笔记 · Chen</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -191,7 +191,7 @@
                 <a href="/" >Chen</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Kotlin笔记</a>
+                <a href="#" class="post-name">Java Web笔记</a>
             </div>
     </div>
     
@@ -223,7 +223,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Kotlin笔记
+            Java Web笔记
             <!-- 404 -->
             
         </h1>
@@ -241,15 +241,19 @@ height:50vh;
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Notes">Notes</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "notes">notes</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Kotlin">Kotlin</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaWeb">JavaWeb</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Mysql">Mysql</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tomcat">Tomcat</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/04/02</span>
+                <span class="post-intro-time">2018/04/06</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -355,7 +359,12 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组的声明"><a href="#数组的声明" class="headerlink" title="数组的声明"></a>数组的声明</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var int_array:IntArray = intArrayOf(1, 2, 3)</span><br><span class="line">var long_array:LongArray = longArrayOf(1, 2, 3)</span><br><span class="line">var float_array:FloatArray = floatArrayOf(1.0f, 2.0f, 3.0f)</span><br><span class="line">var double_array:DoubleArray = doubleArrayOf(1.0, 2.0, 3.0)</span><br><span class="line">var boolean_array:BooleanArray = booleanArrayOf(<span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">var char_array:CharArray = charArrayOf(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>)</span><br><span class="line">//字符串数组声明较为特殊</span><br><span class="line">var string_array:Array&lt;String&gt; = arrayOf(<span class="string">"How"</span>, <span class="string">"Are"</span>, <span class="string">"You"</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="IntelliJ-Idea使用JDBC连接MySql"><a href="#IntelliJ-Idea使用JDBC连接MySql" class="headerlink" title="IntelliJ Idea使用JDBC连接MySql"></a>IntelliJ Idea使用JDBC连接MySql</h2><ol>
+<li><a href="https://dev.mysql.com/downloads/connector/j/" target="_blank" rel="noopener">下载MySql JDBC驱动压缩包</a></li>
+<li>将压缩文件中的mysql-connector-java-5.1.46-bin.jar提取出来，放入创建的JavaWeb项目中Web-&gt;WEB-INF-&gt;lib文件夹内！！！（重要的事情说三遍！！！lib文件夹内！！！如果没有lib文件夹就自己创建一个）</li>
+<li><a href="https://www.imooc.com/article/18385?block_id=tuijian_wz" target="_blank" rel="noopener">点击此处查看详细教程</a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> pageEncoding=<span class="string">"UTF-8"</span> %&gt;</span><br><span class="line">&lt;%@ page import=<span class="string">"java.sql.*"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;%</span><br><span class="line">    String driver = <span class="string">"com.mysql.jdbc.Driver"</span>;</span><br><span class="line">    String url = <span class="string">"jdbc:mysql://localhost:3306/chen"</span>;</span><br><span class="line">    String user = <span class="string">"root"</span>;</span><br><span class="line">    String password = <span class="string">"Sufang090703"</span>;</span><br><span class="line">    try&#123;</span><br><span class="line">        Class.forName(driver); //加载数据库的驱动类</span><br><span class="line">        Connection conn = DriverManager.getConnection(url,user,password); //获取连接（地址，用户名，密码）</span><br><span class="line">        Statement statment = conn.createStatement(); //使用Statment接口运行SQL语句</span><br><span class="line">        String sql = <span class="string">"select * from book"</span>; //选取数据库中的需要使用的表</span><br><span class="line">        ResultSet rs = statment.executeQuery(sql);</span><br><span class="line">        //查询语句：statment.executeQuery(sql);</span><br><span class="line">        //添加、删除或修改语句：statment.executeUpdate(sql);</span><br><span class="line">        String id;</span><br><span class="line">        String name;</span><br><span class="line">        String price;</span><br><span class="line">        <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">            id = rs.getString(<span class="string">"id"</span>);</span><br><span class="line">            name = rs.getString(<span class="string">"name"</span>);</span><br><span class="line">            price = rs.getString(<span class="string">"price"</span>);</span><br><span class="line">            out.println(id+<span class="string">"  "</span>+name+<span class="string">"  "</span>+price+<span class="string">"&lt;BR&gt;"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        //关闭数据库连接</span><br><span class="line">        rs.close();</span><br><span class="line">        statment.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125;catch(ClassNotFoundException e)&#123;</span><br><span class="line">        System.out.println(<span class="string">"No Driver!"</span>);</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;catch(SQLException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;catch(Exception e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
     </article>
     <!-- 前后页  -->
@@ -363,16 +372,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/04/02/2018-notes/Java/" title= Java笔记 >
-                    <div class="nextTitle">Java笔记</div>
+                <a href= "/2018/04/16/2018-notes/Cocos2d/" title= Cocos2d笔记 >
+                    <div class="nextTitle">Cocos2d笔记</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/04/02/2018-notes/统计单词出现的次数/" title= Android Task-1 >
-                    <div class="prevTitle">Android Task-1</div>
+                <a href= "/2018/04/02/2018-notes/Lintcode-最小差/" title= LintCode-最小差 >
+                    <div class="prevTitle">LintCode-最小差</div>
                 </a>
             
         </li>
@@ -427,7 +436,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-number">1.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的声明"><span class="toc-number">1.1.</span> <span class="toc-text">数组的声明</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#IntelliJ-Idea使用JDBC连接MySql"><span class="toc-number">1.</span> <span class="toc-text">IntelliJ Idea使用JDBC连接MySql</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -491,19 +500,59 @@ top:50vh;
     
     
     
-    <div class="total-archive"> Total : 5 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 7 </div>
     
     <div class="post-archive">
     
     
     
     
-    <div class="archive-year"> Invalid date </div>
+    <div class="archive-year"> 2018 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/02/2018-notes/统计单词出现的次数/" >Android Task-1</a>
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2018/04/20/2018-notes/JavaWeb期中实验/" >JavaWeb编写简易购物车</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href= "/2018/04/16/2018-notes/Cocos2d/" >Cocos2d笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2018/04/06/2018-notes/Java Web/" >Java Web笔记</a>
         </li>
     
     
@@ -517,7 +566,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/02/2018-notes/KotLin/" >Kotlin笔记</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/04/02/2018-notes/统计单词出现的次数/" >Android Task-1</a>
         </li>
     
     
@@ -582,6 +631,18 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="Kotlin"><span class="iconfont-archer">&#xe606;</span>Kotlin</span>
     
         <span class="sidebar-tag-name" data-tags="Task"><span class="iconfont-archer">&#xe606;</span>Task</span>
+    
+        <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cocos2d"><span class="iconfont-archer">&#xe606;</span>Cocos2d</span>
+    
+        <span class="sidebar-tag-name" data-tags="notes"><span class="iconfont-archer">&#xe606;</span>notes</span>
+    
+        <span class="sidebar-tag-name" data-tags="JavaWeb"><span class="iconfont-archer">&#xe606;</span>JavaWeb</span>
+    
+        <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="Tomcat"><span class="iconfont-archer">&#xe606;</span>Tomcat</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
